@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp</title>
+    <!-- Your preferred stylesheet library here -->
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" />
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <ul class="navbar-nav flex-grow-1">
+                <li><a asp-area="" asp-page="/Index"><img src="~/img/Train Watch-logos.jpeg" width="60px" height="60px"/></a></li>
+                <li><a asp-area="" asp-page="/Contact">Contact Us</a></li>
+                <li><a asp-area="" asp-page="/Privacy">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div>
+            &copy; 2021 - WebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Your preferred javascript library here -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

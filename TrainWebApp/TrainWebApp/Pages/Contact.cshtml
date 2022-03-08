@@ -1,0 +1,27 @@
+﻿@page
+@model TrainWebApp.Pages.ContactModel
+@{
+	ViewData["Title"] = "Contact Us";
+}
+<div class="text-center">
+    <h1 class="display-4">Contact Us</h1>
+    <p>Contact Us through Email or Text.</p>
+</div>
+<form method="POST">
+        <label for="TextInput">
+        <select name="TextInput" id="Selection">
+            <option value="Contributing">Contributing</option>
+            <option value="Request Membership">Request Membership</option>
+             <option value="Bug Report">Bug Report</option>
+        </select>
+        Enter Email: <input type="email"  />
+        <br/>
+        Enter Message: <input type="text" />
+        <br/>
+        <textarea id="TextInput" name="Message" width="10px" length="20px"></textarea>
+        </label>
+        <br/>
+        <button type="submit" value="send" id="Submission">Send</button>
+
+        
+        </form>
